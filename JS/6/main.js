@@ -1,7 +1,16 @@
 let size = 10;
 let orderElement = 1;
 
-const clickHandler = () => {
+const createLiElements = () => {
+    for (let i = 0; i < 10; i++) {
+        const li = document.createElement('li');
+        const ul = document.querySelector('ul');
+        ul.appendChild(li);
+        li.textContent = `Element nr ${orderElement}`
+        li.style.fontSize = `${size}px`;
+        size++
+        orderElement++
+    }
 
 };
 
@@ -11,11 +20,7 @@ const init = () => {
     const ul = document.createElement('ul');
     document.body.appendChild(btn);
     document.body.appendChild(ul);
-    btn.addEventListener('click', clickHandler);
-};
-
-const createLiElements = () => {
-
+    btn.addEventListener('click', createLiElements);
 };
 
 init()
