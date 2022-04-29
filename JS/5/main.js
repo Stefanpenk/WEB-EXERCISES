@@ -4,11 +4,11 @@ let size = 10;
 
 
 const handleClick = () => {
-    size++;
     liList.forEach(li => {
         li.style.display = "block";
         li.style.fontSize = `${size}px`;
     })
+    size++;
 }
 
 btn.addEventListener('click', handleClick);
