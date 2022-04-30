@@ -14,7 +14,7 @@ const messages = ['I will be at work till 19:00 today.', 'you should change your
 //     }
 // });
 
-let lowerCasePasswords = [];
+const lowerCasePasswords = [];
 
 for (let i = 0; i < passwords.length; i++) {
     lowerCasePasswords[i] = passwords[i].toLowerCase();
