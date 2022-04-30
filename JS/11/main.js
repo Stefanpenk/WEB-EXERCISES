@@ -1,7 +1,7 @@
 const input = document.querySelector('input');
 const div = document.querySelector('div');
 
-const passwords = ['user', 'pass'];
+const passwords = ['User', 'paSs'];
 const messages = ['I will be at work till 19:00 today.', 'you should change your password.'];
 
 //SINGLE PASSWORD HANDLER
@@ -14,19 +14,24 @@ const messages = ['I will be at work till 19:00 today.', 'you should change your
 //     }
 // });
 
+let lowerCasePasswords = [];
+
+for (let i = 0; i < passwords.length; i++) {
+    lowerCasePasswords[i] = passwords[i].toLowerCase();
+}
 
 //MULTI PASSWORDS HANDLER
 input.addEventListener('input', (e) => {
     div.textContent = " ";
-    const text = e.target.value;
+    const text = e.target.value.toLowerCase();
+    console.log(text);
 
-    passwords.forEach((password, index, array) => {
+    lowerCasePasswords.forEach((password, index) => {
         if (password === text) {
             div.textContent = messages[index];
             e.target.value = '';
-            console.log(array)
         }
-    })
+    });
 
 });
 
