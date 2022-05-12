@@ -4,7 +4,7 @@ class Result {
         else return 0;
     }
 
-    static checIfWon(draw) {
+    static checkIfWon(draw) {
         if (draw[0] === draw[1] && draw[1] === draw[2] || draw[0] !== draw[1] && draw[1] !== draw[2] && draw[2] !== draw[0]) {
             return true;
         } else return false;
